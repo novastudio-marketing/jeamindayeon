@@ -4,6 +4,14 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 <title>재민과 다연 모바일 청첩장</title>
+
+<!-- 카카오톡 등 메신저 공유 시 뜨는 미리보기 카드 설정 (Open Graph) -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="재민 ♥ 다연 결혼식에 초대합니다">
+<meta property="og:description" content="2026. 12. 05 SAT · AM 11:00 · 더뉴컨벤션">
+<meta property="og:image" content="여기에_실제_대표사진_URL을_입력하세요.jpg">
+<meta property="og:url" content="여기에_실제_배포된_페이지_주소를_입력하세요">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
@@ -83,10 +91,10 @@ body.big .page:not(#home){font-size:1.18em} body.big .page-title{font-size:calc(
 
       <div class="carousel" aria-label="웨딩 사진 슬라이드">
         <div class="track" id="track">
-          <div class="slide active" data-label="사진 1"><img src="" alt="" onerror="this.remove()"></div>
-          <div class="slide" data-label="사진 2"><img src="" alt="" onerror="this.remove()"></div>
-          <div class="slide" data-label="사진 3"><img src="" alt="" onerror="this.remove()"></div>
-          <div class="slide" data-label="사진 4"><img src="" alt="" onerror="this.remove()"></div>
+          <div class="slide active" data-label="사진 1"><img src="images/photo01.jpg" alt="" onerror="this.remove()"></div>
+          <div class="slide" data-label="사진 2"><img src="images/photo02.jpg" alt="" onerror="this.remove()"></div>
+          <div class="slide" data-label="사진 3"><img src="images/photo03.jpg" alt="" onerror="this.remove()"></div>
+          <div class="slide" data-label="사진 4"><img src="images/photo04.jpg" alt="" onerror="this.remove()"></div>
         </div>
         <div class="dots" id="dots"></div>
       </div>
@@ -194,7 +202,8 @@ function updateDday(){let diff=target-new Date();const el=document.getElementByI
   track.style.animation=`rollTrack ${duration}s linear infinite`;
 })();
 document.querySelectorAll('.nav-btn').forEach(btn=>btn.addEventListener('click',()=>{const id=btn.dataset.page;document.querySelectorAll('.nav-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));document.getElementById(id).classList.add('active')}));
-const gallery=document.getElementById('galleryGrid');for(let i=1;i<=30;i++){const item=document.createElement('button');item.className='g-item';item.dataset.label='사진 '+i;item.onclick=()=>openLightbox(i);gallery.appendChild(item)}function openLightbox(i){const lb=document.getElementById('lightbox'), img=document.getElementById('lightboxImg');img.removeAttribute('src');img.alt='사진 '+i;lb.classList.add('show')}function closeLightbox(){document.getElementById('lightbox').classList.remove('show')}
+const galleryPhotos=['images/photo01.jpg','images/photo02.jpg','images/photo03.jpg','images/photo04.jpg','images/photo05.jpg','images/photo06.jpg','images/photo07.jpg','images/photo08.jpg','images/photo09.jpg','images/photo10.jpg','images/photo11.jpg','images/photo12.jpg','images/photo13.jpg','images/photo14.jpg','images/photo15.jpg'];
+const gallery=document.getElementById('galleryGrid');galleryPhotos.forEach((src,idx)=>{const item=document.createElement('button');item.className='g-item';const img=document.createElement('img');img.src=src;img.alt='사진 '+(idx+1);item.appendChild(img);item.onclick=()=>openLightbox(idx);gallery.appendChild(item)});function openLightbox(idx){const lb=document.getElementById('lightbox'), img=document.getElementById('lightboxImg');img.src=galleryPhotos[idx];img.alt='사진 '+(idx+1);lb.classList.add('show')}function closeLightbox(){document.getElementById('lightbox').classList.remove('show')}
 function addGuest(){const n=document.getElementById('guestName'),t=document.getElementById('guestText'),list=document.getElementById('guestList');if(!n.value.trim()||!t.value.trim()){alert('이름과 메시지를 입력해주세요.');return}const div=document.createElement('div');div.className='guest-item';div.innerHTML=`<b>${escapeHtml(n.value)}</b><p>${escapeHtml(t.value)}</p>`;list.prepend(div);n.value='';t.value=''}function escapeHtml(s){return s.replace(/[&<>"]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m]))}
 const tmis=['신랑은 라면을 한 번에 5봉까지 먹습니다.','신부는 디저트를 고를 때 가장 진지합니다.','둘은 첫 데이트에서 길을 헤맸습니다.','신랑은 사진 찍을 때 꼭 어색하게 웃습니다.','신부는 웃음 참기에 약합니다.'];function drawTmi(){document.getElementById('tmiResult').textContent=tmis[Math.floor(Math.random()*tmis.length)]}function drawLucky(){
   let saved=null; try{ saved=localStorage.getItem('lucky_num'); }catch(e){}
