@@ -2,159 +2,151 @@
 <html lang="ko">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-<title>김재민 · 이다연 모바일 청첩장</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>재민과 다연 모바일 청첩장</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Noto+Serif+Display:wght@400;500;600;700&family=Pretendard:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Parisienne&family=Pretendard:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#e9e9e7;
-  --paper:#ffffff;
-  --black:#0c0c0c;
-  --gray:#606060;
-  --light:#eeeeee;
-  --line:#dedede;
-  --sans:'Pretendard','Apple SD Gothic Neo','Malgun Gothic',sans-serif;
-  --serif:'Noto Serif Display','Times New Roman',serif;
-  --script:'Parisienne',cursive;
+  --bg:#fff; --ink:#090909; --muted:#6b6b6b; --line:#e3e3e3; --soft:#f7f7f7;
+  --serif:'Gowun Batang',serif; --script:'Parisienne',cursive; --sans:'Pretendard',system-ui,-apple-system,sans-serif;
+  --nav-h:82px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:var(--sans);background:var(--bg);color:var(--black);line-height:1.65;letter-spacing:-.02em;max-width:520px;margin:0 auto;min-height:100vh;padding-bottom:88px}
-button,a,input,textarea{font-family:inherit;color:inherit}button{cursor:pointer}a{text-decoration:none}img{display:block;max-width:100%}
-.app{min-height:100vh;background:#fff;box-shadow:0 0 44px rgba(0,0,0,.08);overflow:hidden;position:relative}.screen{display:none;min-height:100vh;background:#fff}.screen.active{display:block}.home{padding:0 0 26px}.top-label{padding:24px 22px 14px;font-size:13px;letter-spacing:.13em;font-weight:800}.hero{padding:0 22px 28px;text-align:center}.hero-photo{height:470px;background:linear-gradient(135deg,#111,#aaa);filter:grayscale(1);position:relative;overflow:hidden}.hero-photo::before{content:'MAIN WEDDING PHOTO';position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#ddd;font-size:12px;letter-spacing:.12em}.hero-photo img{width:100%;height:100%;object-fit:cover}.names{padding:30px 0 18px}.ko-names{font-family:'Batang','GungSeo',serif;font-size:30px;font-weight:400;letter-spacing:.48em;text-indent:.48em;white-space:nowrap}.ko-names .star{letter-spacing:.22em;margin:0 .02em}.en-names{display:flex;justify-content:center;gap:58px;align-items:center;margin-top:-4px}.en-names span{font-family:var(--script);font-size:43px;line-height:1;color:#111}.wedding-info{text-align:center;margin-top:18px;font-size:23px;line-height:1.7}.wedding-info .date{font-size:22px}.wedding-info .time{font-size:24px;font-weight:500}.wedding-info .venue{font-size:24px;font-weight:500}.countbox{margin:32px -22px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:28px 10px 30px;text-align:center}.count-title{font-size:16px;margin-bottom:13px}.count-grid{display:flex;justify-content:center;align-items:baseline;gap:8px;white-space:nowrap}.count-item{min-width:58px}.count-num{font-size:32px;line-height:1.1;font-variant-numeric:tabular-nums;font-weight:400}.count-label{font-size:10px;letter-spacing:.12em;color:#555;margin-top:5px}.count-colon{font-size:30px;line-height:1;margin:0 -1px}.intro{padding:34px 18px 0;text-align:center;font-size:17px;line-height:2.15;word-break:keep-all;color:#222}.home-menu{padding:18px 22px 0}.menu-grid{display:grid;grid-template-columns:repeat(3,1fr);border-left:1px solid var(--line);border-top:1px solid var(--line)}.menu-tile{height:112px;border:0;border-right:1px solid var(--line);border-bottom:1px solid var(--line);background:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;font-size:15px}.menu-tile svg{width:30px;height:30px;stroke:#111;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}.page-head{background:#111;color:#fff;padding:24px 22px 30px}.page-kicker{font-size:12px;letter-spacing:.25em;color:#aaa;margin-bottom:7px}.page-title{font-family:var(--serif);font-size:40px;font-weight:500;line-height:1.08}.page-body{padding:24px 22px 34px}.section-card{border:1px solid var(--line);background:#fff;padding:22px;margin-bottom:16px}.info-row{display:flex;gap:14px;padding:16px 0;border-bottom:1px solid #eee}.info-row:last-child{border-bottom:0}.illust{width:42px;min-width:42px;height:42px;border:1px solid #111;display:grid;place-items:center;background:#fff}.illust svg{width:25px;height:25px;stroke:#111;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}.label{font-size:12px;letter-spacing:.12em;color:#777;font-weight:700}.value{font-size:18px;margin-top:2px}.subtext{font-size:15px;color:#555;line-height:1.85;word-break:keep-all}.btn{border:1px solid #111;background:#111;color:#fff;padding:13px;text-align:center;font-size:15px}.btn.white{background:#fff;color:#111}.map-layout{display:grid;gap:16px}.simple-map{height:310px;background:#f7f7f7;border:1px solid #ddd;position:relative;overflow:hidden}.road{position:absolute;background:#b8b8b8;border-radius:9px}.road.h1{height:9px;width:78%;left:10%;top:42%}.road.v1{width:9px;height:86%;left:36%;top:7%}.road.v2{width:9px;height:78%;left:62%;top:11%}.road.h2{height:7px;width:44%;left:36%;top:61%}.station{position:absolute;left:55%;top:34%;border:4px solid #111;border-radius:50%;width:76px;height:76px;background:#fff;display:grid;place-items:center;font-weight:800;text-align:center;font-size:14px;line-height:1.2}.venue-mark{position:absolute;left:39%;top:69%;text-align:center;font-weight:700;color:#111}.building{width:44px;height:34px;border:2px solid #111;margin:0 auto 5px;position:relative}.building::before{content:'';position:absolute;left:-6px;right:-6px;top:-12px;border-left:28px solid transparent;border-right:28px solid transparent;border-bottom:12px solid #111}.map-label{position:absolute;font-size:13px;font-weight:800}.ml1{left:17%;top:8%}.ml2{left:13%;top:44%;transform:rotate(90deg)}.ml3{right:11%;top:39%}.ml4{right:20%;bottom:8%}.access-box{background:#3f3432;color:#fff;padding:24px 22px;font-size:14px;line-height:1.72}.access-box h3{font-size:20px;margin-bottom:10px}.access-box b{display:block;margin-top:18px;margin-bottom:5px}.map-buttons{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:14px}.map-buttons a{border:1px solid #111;background:#111;color:#fff;padding:13px;text-align:center;font-size:15px}.parking-note{font-size:17px;line-height:1.9}.parking-note b{font-size:20px}.gallery-guide{font-size:14px;color:#666;margin-bottom:16px}.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}.gallery-thumb{aspect-ratio:3/4;border:1px solid #ddd;background:#f0f0f0;color:#777;font-size:11px;display:grid;place-items:center;filter:grayscale(1);overflow:hidden}.gallery-thumb img{width:100%;height:100%;object-fit:cover}.lightbox{position:fixed;inset:0;background:rgba(0,0,0,.92);z-index:100;display:none;align-items:center;justify-content:center;padding:22px}.lightbox.show{display:flex}.lightbox-content{max-width:96%;max-height:82vh;background:#222;color:#fff;display:grid;place-items:center;min-width:260px;min-height:360px;text-align:center}.lightbox img{max-width:100%;max-height:82vh}.light-close{position:fixed;top:18px;right:18px;background:#fff;border:0;width:42px;height:42px;font-size:22px}.guest-form input,.guest-form textarea{width:100%;border:1px solid #111;padding:13px 14px;margin-bottom:8px;font-size:16px}.guest-form textarea{min-height:110px;resize:vertical}.guest-list{margin-top:18px;display:grid;gap:10px}.guest-msg{border:1px solid #ddd;padding:14px}.guest-msg b{display:block;margin-bottom:3px}.event-hero{background:#111;color:#fff;padding:32px 20px;margin:-24px -22px 24px;position:relative;overflow:hidden}.event-hero h3{font-family:var(--serif);font-size:48px;font-weight:500;line-height:.95}.event-hero p{font-size:15px;color:#ddd;margin-top:12px}.event-hero .circle{position:absolute;right:-30px;top:-30px;width:125px;height:125px;border:1px solid rgba(255,255,255,.3);border-radius:50%}.event-grid{display:grid;gap:12px}.event-card{border:1px solid #111;padding:18px;background:#fff;position:relative;overflow:hidden}.event-card.dark{background:#111;color:#fff}.event-card h4{font-size:21px;margin-bottom:7px}.event-card p{font-size:15px;color:#555;word-break:keep-all}.event-card.dark p{color:#ddd}.tmi-result{min-height:60px;font-size:18px;font-weight:600;margin:14px 0;padding:16px;background:#f2f2f2}.event-card.dark .tmi-result{background:#fff;color:#111}.photo-upload{display:block;border:1px dashed #111;padding:16px;text-align:center;margin-top:12px}.scratch{height:120px;background:#111;color:#fff;display:grid;place-items:center;font-size:22px;margin-top:12px}.lucky-num{font-family:var(--serif);font-size:42px;margin:8px 0}.vote-btns{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px}.vote-btns button{padding:14px;border:1px solid #111;background:#fff}.bottom-tabs{position:fixed;left:50%;bottom:0;transform:translateX(-50%);width:100%;max-width:520px;background:#fff;border-top:1px solid #ddd;z-index:45;display:grid;grid-template-columns:repeat(6,1fr);box-shadow:0 -8px 24px rgba(0,0,0,.08)}.bottom-tabs button{border:0;border-right:1px solid #eee;background:#fff;padding:8px 2px 7px;font-size:11px;white-space:nowrap;color:#111}.bottom-tabs button:last-child{border-right:0}.bottom-tabs button.active{background:#111;color:#fff}.bottom-tabs button.active svg{stroke:#fff}.bottom-tabs svg{width:22px;height:22px;display:block;margin:0 auto 2px;stroke:#111;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}.font-toggle{position:fixed;right:14px;bottom:82px;width:56px;height:56px;border-radius:50%;background:#111;color:#fff;border:0;z-index:40;font-size:12px}.big-font{font-size:1.22em}.big-font .intro{font-size:22px}.big-font .value,.big-font .parking-note{font-size:22px}.big-font .bottom-tabs button{font-size:13px}@media (max-width:420px){body{max-width:100%}.hero{padding-left:16px;padding-right:16px}.hero-photo{height:420px}.ko-names{font-size:25px;letter-spacing:.38em;text-indent:.38em}.en-names{gap:42px}.en-names span{font-size:36px}.wedding-info{font-size:20px}.wedding-info .date{font-size:20px}.wedding-info .time,.wedding-info .venue{font-size:21px}.count-item{min-width:50px}.count-num{font-size:28px}.count-colon{font-size:26px}.menu-tile{height:98px;font-size:14px}.page-title{font-size:34px}.gallery-grid{gap:5px}.bottom-tabs button{font-size:10.5px}.bottom-tabs svg{width:20px;height:20px}}@media (min-width:720px){body{max-width:520px}}
+html,body{width:100%;height:100%;background:#ddd;color:var(--ink);font-family:var(--sans);overflow:hidden}
+body{display:flex;justify-content:center} a{color:inherit;text-decoration:none} button,input,textarea{font-family:inherit} button{cursor:pointer;border:0;background:none;color:inherit}
+.app{width:100%;max-width:480px;height:100dvh;background:#fff;position:relative;overflow:hidden;box-shadow:0 0 40px rgba(0,0,0,.16)}
+.page{display:none;height:calc(100dvh - var(--nav-h));overflow-y:auto;padding-bottom:24px;background:#fff}.page.active{display:block}.page:not(#home){padding:30px 22px 28px}.page-title{font-family:var(--serif);font-size:34px;line-height:1.12;letter-spacing:-.05em;margin-bottom:8px}.page-label{font-size:12px;letter-spacing:.28em;color:#777;margin-bottom:10px}.page-desc{font-size:15px;line-height:1.75;color:#555;margin-bottom:22px}.card{border:1px solid var(--line);background:#fff;padding:18px}.btn{height:46px;border:1px solid #111;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:600;background:#fff}.btn.dark{background:#111;color:#fff}.btn-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px}.line{height:1px;background:var(--line);margin:24px 0}.icon svg{width:27px;height:27px;stroke:currentColor;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+
+/* HOME - one screen */
+#home{height:calc(100dvh - var(--nav-h));overflow:hidden;padding:18px 18px 12px;background:linear-gradient(#fff,#fbfaf8)}
+.home-inner{height:100%;display:grid;grid-template-rows:auto minmax(210px,1fr) auto auto auto;gap:10px;align-items:center}
+.top-label{text-align:center;font-size:13px;font-weight:700;letter-spacing:.22em;line-height:1;color:#111;margin-top:2px}
+.carousel{position:relative;height:100%;min-height:220px;max-height:330px;overflow:hidden;border-radius:24px;background:#eee;box-shadow:0 16px 36px rgba(0,0,0,.12)}
+.track{height:100%;display:flex;transition:transform .6s cubic-bezier(.22,.61,.36,1)}
+.slide{min-width:100%;height:100%;position:relative;background:#ddd;overflow:hidden}.slide::before{content:attr(data-label);position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#777;font-size:14px;letter-spacing:.12em;background:linear-gradient(135deg,#f3f3f3,#cfcfcf)}.slide img{position:relative;z-index:1;width:100%;height:100%;object-fit:cover;filter:grayscale(100%)}
+.slide::after{content:'';position:absolute;z-index:2;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.18),rgba(0,0,0,.04) 34%,rgba(0,0,0,.52))}.overlay-msg{position:absolute;z-index:3;left:22px;right:22px;bottom:22px;color:#fff;text-align:center;font-family:var(--serif);font-size:17px;line-height:1.8;text-shadow:0 2px 18px rgba(0,0,0,.6);letter-spacing:-.04em}.dots{position:absolute;z-index:4;bottom:10px;left:0;right:0;display:flex;justify-content:center;gap:7px}.dot{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.55)}.dot.active{background:#fff;width:18px;border-radius:99px}
+.name-box{text-align:center;line-height:1}.kr-names{font-family:var(--serif);display:flex;align-items:baseline;justify-content:center;gap:16px;letter-spacing:.02em}.kr-names .name{font-size:42px;font-weight:700;letter-spacing:.02em}.kr-names .and{font-size:19px;font-weight:400;color:#555}.en-names{font-family:var(--script);font-size:28px;margin-top:4px;color:#111;letter-spacing:.01em}
+.info-box{text-align:center;font-family:var(--serif);font-size:18px;line-height:1.5;letter-spacing:-.03em}.info-box .date{font-size:18px}.info-box .time{font-size:20px;margin-top:2px}.info-box .venue{font-size:20px;margin-top:2px;font-weight:700}
+.count-box{border-top:1px solid var(--line);padding-top:12px;text-align:center}.count-label{font-size:13px;color:#333;margin-bottom:8px}.count-row{display:flex;align-items:flex-start;justify-content:center;gap:7px}.count-seg{width:58px}.count-num{font-size:25px;font-weight:300;letter-spacing:-.06em}.count-unit{font-size:9px;letter-spacing:.08em;color:#666;margin-top:2px}.colon{font-size:25px;font-weight:300;color:#777;line-height:1}
+
+/* NAV */
+.bottom-nav{position:absolute;left:0;right:0;bottom:0;height:var(--nav-h);background:#0b0b0b;color:#fff;display:grid;grid-template-columns:repeat(6,1fr);padding:8px 8px max(8px,env(safe-area-inset-bottom));gap:4px;z-index:50;border-radius:26px 26px 0 0}.nav-btn{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;border-radius:16px;color:#eee;font-size:11px;white-space:nowrap}.nav-btn svg{width:24px;height:24px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}.nav-btn.active{background:#fff;color:#111;font-weight:700}
+
+/* LOCATION */
+.map-card{border:1px solid var(--line);background:#fafafa;overflow:hidden}.map-top{height:260px;position:relative;background:#f8f8f8;border-bottom:1px solid var(--line)}.road{position:absolute;background:#b5b5b5;border-radius:20px}.road.h{height:9px;left:8%;right:8%;top:39%}.road.v1{width:9px;top:12%;bottom:8%;left:39%}.road.v2{width:9px;top:10%;bottom:6%;left:66%}.station{position:absolute;left:57%;top:29%;width:80px;height:80px;border:4px solid #111;border-radius:50%;display:flex;align-items:center;justify-content:center;text-align:center;background:#fff;font-weight:800;line-height:1.18;font-size:14px}.hall{position:absolute;left:37%;top:62%;font-weight:800;color:#4b3d38;text-align:center}.map-bottom{background:#473936;color:#fff;padding:22px 18px;font-size:13px;line-height:1.65}.map-bottom h3{font-size:19px;margin-bottom:10px}.map-bottom b{display:block;margin-top:14px;margin-bottom:3px}.route-card{border:1px solid var(--line);padding:16px;margin-top:10px}.route-card b{font-size:16px}.route-card p{font-size:14px;color:#555;line-height:1.65;margin-top:5px}
+
+/* PARKING */
+.parking-hero{background:#111;color:#fff;border-radius:24px;padding:34px 24px;text-align:center;margin-top:20px}.parking-hero svg{width:62px;height:62px;stroke:#fff;fill:none;stroke-width:1.5;margin-bottom:18px}.parking-hero h3{font-size:28px;margin-bottom:8px}.parking-hero p{font-size:15px;color:#ddd;line-height:1.8}.parking-list{display:grid;gap:10px;margin-top:16px}.parking-item{border:1px solid var(--line);padding:17px;display:flex;gap:14px}.parking-item .no{width:32px;color:#999}.parking-item b{display:block;font-size:17px;margin-bottom:4px}.parking-item p{font-size:15px;line-height:1.65;color:#555}
+
+/* GALLERY */
+.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:20px}.g-item{aspect-ratio:1/1.18;background:#eee;position:relative;overflow:hidden}.g-item::before{content:attr(data-label);position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#999;font-size:12px;background:linear-gradient(135deg,#f2f2f2,#d5d5d5)}.g-item img{position:relative;z-index:1;width:100%;height:100%;object-fit:cover;filter:grayscale(100%)}.lightbox{position:absolute;inset:0;background:rgba(0,0,0,.92);z-index:100;display:none;align-items:center;justify-content:center;padding:20px}.lightbox.show{display:flex}.lightbox img{max-width:100%;max-height:82dvh;object-fit:contain}.lightbox .close{position:absolute;top:18px;right:20px;color:#fff;font-size:34px}
+
+/* GUESTBOOK */
+.form{display:grid;gap:10px}.form input,.form textarea{border:1px solid var(--line);padding:14px;font-size:15px;background:#fff}.form textarea{min-height:110px;resize:vertical}.guest-list{display:grid;gap:10px;margin-top:18px}.guest-item{border:1px solid var(--line);padding:16px}.guest-item b{display:block;margin-bottom:5px}.guest-item p{line-height:1.65;color:#444}
+
+/* EVENT */
+.event-head{background:#111;color:#fff;border-radius:24px;padding:26px 22px;margin:18px 0 16px;position:relative;overflow:hidden}.event-head::before{content:'';position:absolute;width:180px;height:180px;border:1px solid rgba(255,255,255,.18);border-radius:50%;right:-50px;top:-70px}.event-head h3{font-size:30px;line-height:1.05;margin-bottom:10px}.event-head p{font-size:14px;color:#ddd;line-height:1.65}.event-grid{display:grid;gap:12px}.event-card{border:1px solid #111;padding:18px;background:#fff;position:relative}.event-card:nth-child(2n){background:#111;color:#fff}.event-card .mini{font-size:12px;letter-spacing:.12em;color:#777;margin-bottom:8px}.event-card:nth-child(2n) .mini{color:#bbb}.event-card h4{font-size:21px;margin-bottom:8px}.event-card p{font-size:14px;line-height:1.6;color:#555}.event-card:nth-child(2n) p{color:#ddd}.tmi-result{font-family:var(--serif);font-size:17px;line-height:1.65;margin-top:12px;min-height:54px}.lucky-num{font-size:42px;font-weight:300;letter-spacing:.08em;margin:8px 0}
+
+body.big .page:not(#home){font-size:1.18em} body.big .page-title{font-size:40px} body.big .nav-btn{font-size:12px} body.big .kr-names .name{font-size:48px} body.big .info-box{font-size:21px} body.big .overlay-msg{font-size:19px}
+@media (max-height:740px){:root{--nav-h:76px}#home{padding:14px 16px 8px}.home-inner{gap:7px}.carousel{min-height:185px;max-height:260px;border-radius:20px}.overlay-msg{font-size:15px;line-height:1.65;bottom:20px}.kr-names .name{font-size:35px}.kr-names .and{font-size:16px}.en-names{font-size:24px}.info-box{font-size:16px;line-height:1.42}.info-box .time,.info-box .venue{font-size:17px}.count-box{padding-top:8px}.count-num,.colon{font-size:22px}.count-seg{width:51px}.top-label{font-size:12px;margin-bottom:4px}.bottom-nav{height:var(--nav-h)}.nav-btn svg{width:21px;height:21px}.nav-btn{font-size:10px}}
+@media (min-width:700px){.app{max-width:430px}}
 </style>
 </head>
 <body>
 <div class="app">
-  <main class="screen home active" id="home">
-    <div class="top-label">WEDDING INVITATION</div>
-    <section class="hero">
-      <div class="hero-photo"></div>
-      <div class="names">
-        <div class="ko-names">김 재 민 <span class="star">*</span> 이 다 연</div>
-        <div class="en-names"><span>Jaemin</span><span>Dayeon</span></div>
+  <section class="page active" id="home">
+    <div class="home-inner">
+      <div class="top-label">WEDDING INVITATION</div>
+
+      <div class="carousel" aria-label="웨딩 사진 슬라이드">
+        <div class="track" id="track">
+          <div class="slide" data-label="사진 1"><img src="" alt="" onerror="this.remove()"><div class="overlay-msg">저희 두 사람이 사랑의 결실을 맺고<br>새로운 시작을 함께하려 합니다.</div></div>
+          <div class="slide" data-label="사진 2"><img src="" alt="" onerror="this.remove()"><div class="overlay-msg">소중한 분들을 모시고<br>축복의 자리를 마련하였습니다.</div></div>
+          <div class="slide" data-label="사진 3"><img src="" alt="" onerror="this.remove()"><div class="overlay-msg">귀한 걸음 하시어 함께 축복해주시면<br>더없는 기쁨이 되겠습니다.</div></div>
+          <div class="slide" data-label="사진 4"><img src="" alt="" onerror="this.remove()"><div class="overlay-msg">재민과 다연의 시작을<br>따뜻하게 지켜봐 주세요.</div></div>
+        </div>
+        <div class="dots" id="dots"></div>
       </div>
-      <div class="wedding-info">
+
+      <div class="name-box">
+        <div class="kr-names"><span class="name">재민</span><span class="and">과</span><span class="name">다연</span></div>
+        <div class="en-names">Jaemin &amp; Dayeon</div>
+      </div>
+
+      <div class="info-box">
         <div class="date">2026. 12. 05 SAT</div>
         <div class="time">AM 11:10</div>
         <div class="venue">더뉴컨벤션</div>
       </div>
-      <div class="countbox">
-        <div class="count-title">예식까지 남은 시간</div>
-        <div class="count-grid" id="countGrid"></div>
-      </div>
-      <p class="intro">저희 두 사람이 사랑의 결실을 맺고<br>새로운 시작을 함께하려 합니다.<br><br>소중한 분들을 모시고 축복의 자리를 마련하였으니<br>귀한 걸음 하시어 함께 축복해주시면<br>더없는 기쁨이 되겠습니다.</p>
-    </section>
-    <section class="home-menu">
-      <div class="menu-grid">
-        <button class="menu-tile" onclick="openScreen('map')">@@icon-pin@@<span>오시는 길</span></button>
-        <button class="menu-tile" onclick="openScreen('parking')">@@icon-car@@<span>주차 안내</span></button>
-        <button class="menu-tile" onclick="openScreen('gallery')">@@icon-image@@<span>갤러리</span></button>
-        <button class="menu-tile" onclick="openScreen('guestbook')">@@icon-mail@@<span>방명록</span></button>
-        <button class="menu-tile" onclick="openScreen('event')">@@icon-party@@<span>이벤트</span></button>
-        <button class="menu-tile" onclick="toggleFont()">@@icon-font@@<span>큰글씨</span></button>
-      </div>
-    </section>
-  </main>
 
-  <section class="screen" id="screen-map">
-    <div class="page-head"><div class="page-kicker">LOCATION</div><h2 class="page-title">오시는 길</h2></div>
-    <div class="page-body">
-      <div class="map-layout">
-        <div class="simple-map">
-          <div class="road h1"></div><div class="road v1"></div><div class="road v2"></div><div class="road h2"></div>
-          <div class="station">발산역<br>사거리</div>
-          <div class="venue-mark"><div class="building"></div>더뉴컨벤션웨딩홀</div>
-          <div class="map-label ml1">가양동</div><div class="map-label ml2">김포공항</div><div class="map-label ml3">성산대교</div><div class="map-label ml4">화곡역 방향</div>
-        </div>
-        <div class="access-box">
-          <h3>더뉴컨벤션웨딩</h3>
-          <p>서울시 강서구 공항대로36길 57<br>TEL. 1661-3303</p>
-          <b>지하철</b><p>5호선 발산역 하차 · 7번 출구 도보 2분</p>
-          <b>버스</b><p>발산역 하차 후 도보 이동</p>
-          <b>승용차 이용시</b><p>네비게이션에 ‘강서 더뉴컨벤션’ 또는 주소를 입력해주세요.</p>
-        </div>
-      </div>
-      <div class="map-buttons"><a target="_blank" href="https://map.kakao.com/link/search/강서 더뉴컨벤션">카카오맵</a><a target="_blank" href="https://map.naver.com/v5/search/강서 더뉴컨벤션">네이버맵</a></div>
-    </div>
-  </section>
-
-  <section class="screen" id="screen-parking">
-    <div class="page-head"><div class="page-kicker">PARKING</div><h2 class="page-title">주차 안내</h2></div>
-    <div class="page-body">
-      <div class="section-card">
-        <div class="info-row"><div class="illust">@@icon-car@@</div><div><div class="label">PARKING</div><div class="parking-note"><b>B4 ~ F1까지 총 720대 동시 주차 가능</b>외부 주차장도 여유롭게 마련되어 있습니다.<br>만차 시 건너편 이대목동병원 주차 가능합니다.<br><br><b>하객 2시간 무료 주차</b></div></div></div>
+      <div class="count-box">
+        <div class="count-label">예식까지 남은 시간</div>
+        <div class="count-row" id="dday">계산 중...</div>
       </div>
     </div>
   </section>
 
-  <section class="screen" id="screen-gallery">
-    <div class="page-head"><div class="page-kicker">GALLERY</div><h2 class="page-title">우리의 순간들</h2></div>
-    <div class="page-body">
-      <p class="gallery-guide">사진 30장이 들어가는 그리드형 갤러리입니다. 사진을 누르면 크게 볼 수 있습니다.</p>
-      <div class="gallery-grid" id="galleryGrid"></div>
-    </div>
-  </section>
-
-  <section class="screen" id="screen-guestbook">
-    <div class="page-head"><div class="page-kicker">MESSAGE</div><h2 class="page-title">방명록</h2></div>
-    <div class="page-body">
-      <div class="guest-form"><input id="gbName" placeholder="성함"><textarea id="gbText" placeholder="축하 메시지를 남겨주세요"></textarea><button class="btn" onclick="addGuestbook()">메시지 남기기</button></div>
-      <div class="guest-list" id="guestList"></div>
-    </div>
-  </section>
-
-  <section class="screen" id="screen-event">
-    <div class="page-head"><div class="page-kicker">FUN EVENT</div><h2 class="page-title">이벤트</h2></div>
-    <div class="page-body">
-      <div class="event-hero"><span class="circle"></span><h3>Today<br>Mission</h3><p>가볍게 누르고 참여할 수 있는 예식 이벤트입니다.</p></div>
-      <div class="event-grid">
-        <div class="event-card dark"><h4>랜덤 TMI 뽑기</h4><p>버튼을 누르면 신랑신부의 재미있는 이야기가 나옵니다.</p><div class="tmi-result" id="tmiResult">TMI를 뽑아보세요.</div><button class="btn white" onclick="drawTmi()">TMI 뽑기</button></div>
-        <div class="event-card"><h4>신랑 · 신부 인증샷</h4><p>함께 찍은 사진을 올려주세요. 좋아요 TOP3에게 스타벅스 쿠폰!</p><label class="photo-upload">사진 업로드하기<input type="file" accept="image/*" hidden></label></div>
-        <div class="event-card"><h4>행운번호</h4><p>사회자가 번호를 발표하면 당첨!</p><div class="lucky-num" id="luckyNum">No. ---</div><button class="btn" onclick="drawLucky()">행운번호 뽑기</button></div>
-        <div class="event-card dark"><h4>스크래치 복권</h4><p>화면을 눌러 오늘의 선물을 확인해보세요.</p><div class="scratch" onclick="scratch()" id="scratchBox">TOUCH!</div></div>
-        <div class="event-card"><h4>밸런스 투표</h4><p>오늘 먼저 울 사람은?</p><div class="vote-btns"><button onclick="alert('신랑에 투표했어요')">신랑</button><button onclick="alert('신부에 투표했어요')">신부</button></div></div>
+  <section class="page" id="location">
+    <div class="page-label">LOCATION</div><h2 class="page-title">오시는 길</h2><p class="page-desc">더뉴컨벤션 · 서울시 강서구 공항대로36길 57</p>
+    <div class="map-card">
+      <div class="map-top">
+        <div class="road h"></div><div class="road v1"></div><div class="road v2"></div>
+        <div class="station">발산역<br>사거리</div><div class="hall">더뉴컨벤션<br>웨딩홀</div>
       </div>
+      <div class="map-bottom"><h3>더뉴컨벤션</h3>서울시 강서구 공항대로36길 57<br>내발산동 655-2<br>TEL. 1661-3303<b>지하철</b>5호선 발산역 하차 7번 출구 도보 2분</div>
+    </div>
+    <div class="btn-row"><a class="btn dark" target="_blank" href="https://map.kakao.com/link/search/더뉴컨벤션">카카오맵</a><a class="btn" target="_blank" href="https://map.naver.com/v5/search/더뉴컨벤션">네이버맵</a></div>
+    <div class="btn-row"><a class="btn" target="_blank" href="tmap://search?name=더뉴컨벤션">티맵</a><a class="btn" href="tel:16613303">전화하기</a></div>
+    <div class="route-card"><b>버스 이용</b><p>발산역 하차 후 도보 이동이 가장 편리합니다. 공항버스, 일반버스, 지선버스 노선을 이용하실 수 있습니다.</p></div>
+  </section>
+
+  <section class="page" id="parking">
+    <div class="page-label">PARKING</div><h2 class="page-title">주차 안내</h2><p class="page-desc">주차 공간은 여유롭게 준비되어 있습니다.</p>
+    <div class="parking-hero"><svg viewBox="0 0 64 64"><rect x="12" y="22" width="40" height="24" rx="6"/><path d="M20 22l4-9h16l4 9"/><circle cx="22" cy="48" r="4"/><circle cx="42" cy="48" r="4"/><path d="M20 32h24"/></svg><h3>720대 주차</h3><p>B4 ~ F1까지 총 720대 동시 주차 가능<br>외부 주차장도 여유롭게 마련되어 있습니다.</p></div>
+    <div class="parking-list"><div class="parking-item"><div class="no">01</div><div><b>기본 주차</b><p>B4 ~ F1 주차장 이용 가능</p></div></div><div class="parking-item"><div class="no">02</div><div><b>외부 주차장</b><p>만차 시 건너편 이대목동병원 주차 가능합니다.</p></div></div><div class="parking-item"><div class="no">03</div><div><b>무료 주차</b><p>하객 2시간 무료 주차 지원</p></div></div></div>
+  </section>
+
+  <section class="page" id="gallery">
+    <div class="page-label">GALLERY</div><h2 class="page-title">우리의 순간들</h2><p class="page-desc">사진을 누르면 크게 확인할 수 있습니다. 실제 사진 30장으로 교체해주세요.</p><div class="gallery-grid" id="galleryGrid"></div>
+  </section>
+
+  <section class="page" id="guestbook">
+    <div class="page-label">GUESTBOOK</div><h2 class="page-title">방명록</h2><p class="page-desc">따뜻한 축하 한마디를 남겨주세요.</p>
+    <div class="form"><input id="guestName" placeholder="이름"><textarea id="guestText" placeholder="축하 메시지"></textarea><button class="btn dark" onclick="addGuest()">메시지 남기기</button></div><div class="guest-list" id="guestList"></div>
+  </section>
+
+  <section class="page" id="event">
+    <div class="page-label">EVENT</div><h2 class="page-title">함께 즐기는 이벤트</h2>
+    <div class="event-head"><h3>WEDDING<br>MISSION</h3><p>가볍게 참여하고 추억도 남길 수 있는 이벤트입니다.</p></div>
+    <div class="event-grid">
+      <div class="event-card"><div class="mini">RANDOM TMI</div><h4>TMI 뽑기</h4><p>버튼을 누르면 신랑신부의 작은 이야기가 나옵니다.</p><div class="tmi-result" id="tmiResult">버튼을 눌러주세요.</div><button class="btn dark" style="width:100%;margin-top:12px" onclick="drawTmi()">뽑기</button></div>
+      <div class="event-card"><div class="mini">LUCKY NUMBER</div><h4>행운번호</h4><p>사회자 안내 시 번호를 확인해주세요.</p><div class="lucky-num" id="luckyNum">---</div><button class="btn" style="width:100%;margin-top:12px" onclick="drawLucky()">번호 뽑기</button></div>
+      <div class="event-card"><div class="mini">PHOTO MISSION</div><h4>인증샷 이벤트</h4><p>신랑 또는 신부와 사진을 찍어 올려주세요. 좋아요 TOP3에게 선물을 드립니다.</p></div>
+      <div class="event-card"><div class="mini">SCRATCH</div><h4>스크래치 복권</h4><p>현장에서 간단한 경품 이벤트로 활용할 수 있습니다.</p></div>
     </div>
   </section>
 
-  <div class="lightbox" id="lightbox"><button class="light-close" onclick="closeLightbox()">×</button><div class="lightbox-content" id="lightboxContent"></div></div>
-  <button class="font-toggle" onclick="toggleFont()">큰글씨</button>
-  <nav class="bottom-tabs" aria-label="청첩장 하단 메뉴">
-    <button data-tab="home" class="active" onclick="openScreen('home')">@@icon-home@@홈</button>
-    <button data-tab="map" onclick="openScreen('map')">@@icon-pin@@오시는 길</button>
-    <button data-tab="parking" onclick="openScreen('parking')">@@icon-car@@주차</button>
-    <button data-tab="gallery" onclick="openScreen('gallery')">@@icon-image@@갤러리</button>
-    <button data-tab="guestbook" onclick="openScreen('guestbook')">@@icon-mail@@방명록</button>
-    <button data-tab="event" onclick="openScreen('event')">@@icon-party@@이벤트</button>
+  <div class="lightbox" id="lightbox"><button class="close" onclick="closeLightbox()">×</button><img id="lightboxImg" alt="확대 사진"></div>
+
+  <nav class="bottom-nav">
+    <button class="nav-btn active" data-page="home"><svg viewBox="0 0 24 24"><path d="M3 11.5L12 4l9 7.5"/><path d="M5 10.5V21h14V10.5"/><path d="M9.5 21v-6h5v6"/></svg><span>홈</span></button>
+    <button class="nav-btn" data-page="location"><svg viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg><span>오시는 길</span></button>
+    <button class="nav-btn" data-page="parking"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9 17V7h4.2a3 3 0 0 1 0 6H9"/></svg><span>주차</span></button>
+    <button class="nav-btn" data-page="gallery"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="14" rx="1.5"/><path d="M7 16l4-4 3 3 2-2 3 3"/><circle cx="8.5" cy="8.5" r="1.2"/></svg><span>갤러리</span></button>
+    <button class="nav-btn" data-page="guestbook"><svg viewBox="0 0 24 24"><path d="M4 7l8 6 8-6"/><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M12 13l-2 2-3-3"/><path d="M12 13l2 2 3-3"/></svg><span>방명록</span></button>
+    <button class="nav-btn" data-page="event"><svg viewBox="0 0 24 24"><path d="M20 12v9H4v-9"/><path d="M2 7h20v5H2z"/><path d="M12 7v14"/><path d="M12 7H8.5A2.5 2.5 0 1 1 12 4.5V7z"/><path d="M12 7h3.5A2.5 2.5 0 1 0 12 4.5V7z"/></svg><span>이벤트</span></button>
   </nav>
 </div>
 <script>
-const icons={
-'@@icon-home@@':'<svg viewBox="0 0 24 24"><path d="M4 11l8-7 8 7"></path><path d="M6 10v10h12V10"></path></svg>',
-'@@icon-pin@@':'<svg viewBox="0 0 24 24"><path d="M12 21s7-6.1 7-12A7 7 0 0 0 5 9c0 5.9 7 12 7 12z"></path><circle cx="12" cy="9" r="2.5"></circle></svg>',
-'@@icon-car@@':'<svg viewBox="0 0 24 24"><path d="M5 13l2-5h10l2 5"></path><rect x="3" y="12" width="18" height="6" rx="2"></rect><circle cx="7" cy="18" r="1.5"></circle><circle cx="17" cy="18" r="1.5"></circle></svg>',
-'@@icon-image@@':'<svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="14" rx="1"></rect><circle cx="9" cy="10" r="1.5"></circle><path d="M5 17l5-5 4 4 2-2 3 3"></path></svg>',
-'@@icon-mail@@':'<svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="14" rx="1"></rect><path d="M3 8l9 7 9-7"></path><path d="M8 5c1-2 4-1 4 1 0-2 3-3 4-1 1 2-2 4-4 6-2-2-5-4-4-6z"></path></svg>',
-'@@icon-party@@':'<svg viewBox="0 0 24 24"><path d="M5 20l4-14 9 9-13 5z"></path><path d="M13 4l1-2M17 7l3-2M18 11h3M8 9l6 6"></path></svg>',
-'@@icon-font@@':'<svg viewBox="0 0 24 24"><path d="M4 19l5-14h2l5 14"></path><path d="M6.5 14h7"></path><path d="M17 10h3M18.5 8v8"></path></svg>'
-};
-document.body.innerHTML=document.body.innerHTML.replace(/@@icon-[a-z]+@@/g,m=>icons[m]||m);
-function openScreen(id){document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));document.getElementById(id==='home'?'home':'screen-'+id).classList.add('active');document.querySelectorAll('.bottom-tabs button').forEach(b=>b.classList.toggle('active',b.dataset.tab===id));window.scrollTo(0,0)}
-function updateCount(){const target=new Date('2026-12-05T11:10:00+09:00');let diff=target-new Date();if(diff<0)diff=0;const d=Math.floor(diff/86400000);diff-=d*86400000;const h=Math.floor(diff/3600000);diff-=h*3600000;const m=Math.floor(diff/60000);diff-=m*60000;const s=Math.floor(diff/1000);const data=[['DAYS',d],['HOURS',h],['MINUTES',m],['SECONDS',s]];document.getElementById('countGrid').innerHTML=data.map((x,i)=>`<div class="count-item"><div class="count-num">${String(x[1]).padStart(2,'0')}</div><div class="count-label">${x[0]}</div></div>${i<3?'<span class="count-colon">:</span>':''}`).join('')}
-updateCount();setInterval(updateCount,1000);
-const grid=document.getElementById('galleryGrid');for(let i=1;i<=30;i++){const b=document.createElement('button');b.className='gallery-thumb';b.textContent='PHOTO '+i;b.onclick=()=>openLightbox(i);grid.appendChild(b)}
-function openLightbox(i){document.getElementById('lightbox').classList.add('show');document.getElementById('lightboxContent').innerHTML='<div style="font-size:22px;text-align:center">PHOTO '+i+'<br><small style="font-size:14px;color:#aaa">실제 사진으로 교체될 자리입니다.</small></div>'}
-function closeLightbox(){document.getElementById('lightbox').classList.remove('show')}
-function addGuestbook(){const n=document.getElementById('gbName').value.trim()||'하객';const t=document.getElementById('gbText').value.trim();if(!t){alert('메시지를 입력해주세요.');return}const div=document.createElement('div');div.className='guest-msg';div.innerHTML='<b>'+escapeHtml(n)+'</b><span>'+escapeHtml(t)+'</span>';document.getElementById('guestList').prepend(div);document.getElementById('gbName').value='';document.getElementById('gbText').value=''}
-function escapeHtml(s){const d=document.createElement('div');d.textContent=s;return d.innerHTML}
-const tmis=['신랑은 라면을 한 번에 5봉까지 먹습니다.','신부는 디저트 배가 따로 있습니다.','두 사람은 첫 데이트에서 길을 한참 헤맸습니다.','신랑은 프러포즈를 위해 몇 달을 몰래 준비했습니다.'];
-function drawTmi(){document.getElementById('tmiResult').textContent=tmis[Math.floor(Math.random()*tmis.length)]}
-function drawLucky(){document.getElementById('luckyNum').textContent='No. '+String(Math.floor(Math.random()*999)+1).padStart(3,'0')}
-function scratch(){const prizes=['스타벅스 아메리카노','디저트 쿠폰','소정의 선물','다음 기회에'];document.getElementById('scratchBox').textContent=prizes[Math.floor(Math.random()*prizes.length)]}
-function toggleFont(){document.body.classList.toggle('big-font')}
+const target = new Date('2026-12-05T11:10:00+09:00');
+function updateDday(){let diff=target-new Date();const el=document.getElementById('dday');if(diff<=0){el.innerHTML='<div class="count-label">오늘 결혼합니다.</div>';return}const d=Math.floor(diff/86400000);diff-=d*86400000;const h=Math.floor(diff/3600000);diff-=h*3600000;const m=Math.floor(diff/60000);diff-=m*60000;const s=Math.floor(diff/1000);const seg=(n,u)=>`<div class="count-seg"><div class="count-num">${String(n).padStart(2,'0')}</div><div class="count-unit">${u}</div></div>`;el.innerHTML=seg(d,'DAYS')+'<div class="colon">:</div>'+seg(h,'HOURS')+'<div class="colon">:</div>'+seg(m,'MINUTES')+'<div class="colon">:</div>'+seg(s,'SECONDS')}updateDday();setInterval(updateDday,1000);
+const track=document.getElementById('track'), dots=document.getElementById('dots');let slide=0,total=track.children.length;for(let i=0;i<total;i++){let d=document.createElement('span');d.className='dot'+(i===0?' active':'');dots.appendChild(d)}function goSlide(n){slide=n%total;track.style.transform=`translateX(${-slide*100}%)`;[...dots.children].forEach((d,i)=>d.classList.toggle('active',i===slide))}setInterval(()=>goSlide(slide+1),3600);
+document.querySelectorAll('.nav-btn').forEach(btn=>btn.addEventListener('click',()=>{const id=btn.dataset.page;document.querySelectorAll('.nav-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));document.getElementById(id).classList.add('active')}));
+const gallery=document.getElementById('galleryGrid');for(let i=1;i<=30;i++){const item=document.createElement('button');item.className='g-item';item.dataset.label='사진 '+i;item.onclick=()=>openLightbox(i);gallery.appendChild(item)}function openLightbox(i){const lb=document.getElementById('lightbox'), img=document.getElementById('lightboxImg');img.removeAttribute('src');img.alt='사진 '+i;lb.classList.add('show')}function closeLightbox(){document.getElementById('lightbox').classList.remove('show')}
+function addGuest(){const n=document.getElementById('guestName'),t=document.getElementById('guestText'),list=document.getElementById('guestList');if(!n.value.trim()||!t.value.trim()){alert('이름과 메시지를 입력해주세요.');return}const div=document.createElement('div');div.className='guest-item';div.innerHTML=`<b>${escapeHtml(n.value)}</b><p>${escapeHtml(t.value)}</p>`;list.prepend(div);n.value='';t.value=''}function escapeHtml(s){return s.replace(/[&<>"]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m]))}
+const tmis=['신랑은 라면을 한 번에 5봉까지 먹습니다.','신부는 디저트를 고를 때 가장 진지합니다.','둘은 첫 데이트에서 길을 헤맸습니다.','신랑은 사진 찍을 때 꼭 어색하게 웃습니다.','신부는 웃음 참기에 약합니다.'];function drawTmi(){document.getElementById('tmiResult').textContent=tmis[Math.floor(Math.random()*tmis.length)]}function drawLucky(){document.getElementById('luckyNum').textContent='No. '+String(Math.floor(Math.random()*999)+1).padStart(3,'0')}
 </script>
 </body>
 </html>
